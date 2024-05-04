@@ -382,7 +382,7 @@ form  input[type="submit"]:hover {
 .copyright-text a:hover {
     color: #fff !important;
 }
-@media(max-width:991px)
+@media(max-width:767px)
 {
   .logo {
     /* width: 90%; */
@@ -404,7 +404,7 @@ form  input[type="submit"]:hover {
     margin-bottom:30px
   }
 }
-@media(max-width:767px)
+@media(max-width:480px)
 
 {
   .carts-products {
