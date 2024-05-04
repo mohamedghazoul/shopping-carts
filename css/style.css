@@ -5,7 +5,7 @@
 }
 body {
     font-family:Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 .header {
   /* position: sticky; */
@@ -390,6 +390,8 @@ footer
       width: 100%;
       /* text-align: left; */
       font-size: 22px;
+    }.carts-products {
+      top: 100px !important;
     }
     form {
       margin-top: 70px;
@@ -410,13 +412,9 @@ footer
     top: 0;
   }
   .logo {
-    width: 90%;
-    /* display: block; */
-    a , h1 {
-      width: 100%;
-      /* text-align: left; */
-      font-size: 18px;
-    }
+    width: 80% !important;
+    margin: auto !important;
+    text-align: center !important;
   }
     form {
         margin-top: 70px;
@@ -433,6 +431,12 @@ footer
         /* height: 100px; */
         justify-content: space-around;
         align-items: center;
+        margin: auto;
+        min-height: 70px;
+        /* display: flex; */
+        /* justify-content: space-around; */
+        background-color: #53555e;
+        padding:0 20px;
     }
   .site-footer
   {
