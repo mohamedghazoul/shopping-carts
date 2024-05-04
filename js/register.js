@@ -4,6 +4,7 @@ let password = document.querySelector(".passowrd-register")
 let submit = document.querySelector(".submit-register")
 let spenar = document.querySelector(".fa-spinner")
 let ss = document.querySelector(".ss")
+let lab = document.querySelector(".lab")
 // let data = [];
 
 
@@ -12,20 +13,32 @@ let data = localStorage.getItem("data")?JSON.parse(localStorage.getItem("data"))
 submit.addEventListener("click",function(e){
     e.preventDefault()
     if(name.value ==="" || email.value==="" || password.value===""){
+            setTimeout(() => {
+                ss.style.display = "none"
+                spenar.style.display = "block"
+            }, 500);
         setTimeout(() => {
-            ss.style.display = "none"
-            spenar.style.display = "block"
-        }, 500);
-        setTimeout(() => {
-            alert("please enter your data")
+            lab.innerHTML = "Please Enter your data"
         },1500 );
         setTimeout(() => {
             ss.style.display = "block"
             spenar.style.display = "none"
-        }, 1400);
-
-        
+        }, 1400);   
     }else{
+        let x = data.find((item)=>item.name==name.value)
+        let y = data.find((item)=>item.email==email.value)
+        if(x!=null&&y!=null){
+            setTimeout(() => {
+                ss.style.display = "none"
+                spenar.style.display = "block"
+            }, 500);
+            setTimeout(() => {
+                spenar.style.display = "none"
+                lab.innerHTML = "The Email Or User Name Olready token"
+                ss.style.display = "block"
+            }, 1500);
+        }
+        else{
         localStorage.setItem ("name", name.value)
         localStorage.setItem ("email", email.value )
         localStorage.setItem ("password",password.value)
@@ -46,5 +59,6 @@ submit.addEventListener("click",function(e){
         }, 3000);
         data.push({name:localStorage.getItem("name"),email:localStorage.getItem("email"),password:localStorage.getItem("password")})
         console.log(data)
+    }
     }
 })
