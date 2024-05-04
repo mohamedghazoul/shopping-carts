@@ -27,7 +27,17 @@ submit.addEventListener("click",function(e){
     }else{
         let x = data.find((item)=>item.name==name.value)
         let y = data.find((item)=>item.email==email.value)
-        if(x!=null||y!=null){
+        if(x!=null){
+            setTimeout(() => {
+                ss.style.display = "none"
+                spenar.style.display = "block"
+            }, 500);
+            setTimeout(() => {
+                spenar.style.display = "none"
+                lab.innerHTML = "The Email Or User Name Olready token"
+                ss.style.display = "block"
+            }, 1500);
+        }else if(y!=null){
             setTimeout(() => {
                 ss.style.display = "none"
                 spenar.style.display = "block"
