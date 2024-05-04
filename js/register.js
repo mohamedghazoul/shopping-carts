@@ -27,7 +27,7 @@ submit.addEventListener("click",function(e){
     }else{
         let x = data.find((item)=>item.name==name.value)
         let y = data.find((item)=>item.email==email.value)
-        if(x!=null&&y!=null){
+        if(x!=null||y!=null){
             setTimeout(() => {
                 ss.style.display = "none"
                 spenar.style.display = "block"
