@@ -45,13 +45,14 @@ let drow = products.map((item)=>{
 continer.innerHTML += drow.join("")
 // delete
 function deleteItems (id){
+    if(products.length==1){
+        products = [];
+        localStorage.products_carts = JSON.stringify(products)
+        window.location = "index.html"
+    }
         products.splice(id,1)
         localStorage.products_carts = JSON.stringify(products)
         console.log(products)
         console.log(id)
         location.reload()
-        if(products.length==0){
-            window.location = "index.html"
-        }
-        
 }
