@@ -48,7 +48,6 @@ body {
         display: flex;
         justify-content: space-between;
         list-style: none;
-
     }
 }
 .carts-products {
@@ -283,7 +282,7 @@ form  input[type="submit"]:hover {
 
 
 /* footer */
-.site-footer
+footer
 {
     /* width: 80%;
     margin: auto; */
@@ -298,6 +297,7 @@ form  input[type="submit"]:hover {
  width: 100%;
   a {
     color: #fff ;
+    
   }
   a:hover {
     color: #000 ;
@@ -378,9 +378,6 @@ form  input[type="submit"]:hover {
     transition: .3s;
     font-weight: bold;
     margin-top: 4px;
-}
-.copyright-text a:hover {
-    color: #fff !important;
 }
 @media(max-width:767px)
 {
