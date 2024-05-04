@@ -94,10 +94,10 @@ function addItems(id){
 
 function opin(){
     if (localStorage.getItem("products")){
-    if (carts_products.style.right == "-200px"){
-      carts_products.style.right = "0px"
+    if (carts_products.style.opacity == "0"){
+      carts_products.style.opacity = "1"
     }else {
-      carts_products.style.right = "-200px"
+      carts_products.style.opacity = "0"
     }
   }else{
     alert ("please shosse your products")
