@@ -4,7 +4,10 @@ let password = document.querySelector(".passowrd-register")
 let submit = document.querySelector(".submit-register")
 let spenar = document.querySelector(".fa-spinner")
 let ss = document.querySelector(".ss")
-let data = [];
+// let data = [];
+
+
+let data = localStorage.getItem("data")?JSON.parse(localStorage.getItem("data")):[]
 
 submit.addEventListener("click",function(e){
     e.preventDefault()
@@ -20,11 +23,16 @@ submit.addEventListener("click",function(e){
             ss.style.display = "block"
             spenar.style.display = "none"
         }, 1400);
+
         
     }else{
         localStorage.setItem ("name", name.value)
         localStorage.setItem ("email", email.value )
         localStorage.setItem ("password",password.value)
+        data.push({name:name.value,email:email.value,password:password.value})
+        localStorage.setItem("data",JSON.stringify(data))
+
+
         setTimeout(() => {
             ss.style.display = "none"
             spenar.style.display = "block"
