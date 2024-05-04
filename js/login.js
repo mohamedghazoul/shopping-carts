@@ -6,13 +6,16 @@ let ss = document.querySelector(".ss")
 
 let setName = localStorage.getItem("name")
 let setPassword = localStorage.getItem("password")
-
+let data = localStorage.getItem("data")?JSON.parse(localStorage.getItem("data")):[]
 submit.addEventListener("click",function(e){
     e.preventDefault()
     if(name.value ==="" || password.value===""){
         alert("please enter your data")
     }else{
-        if(setName && setName.trim() ===name.value && setPassword && setPassword.trim()===password.value ){
+        let x = data.find((item)=>item.name==name.value)
+        let y = data.find((item)=>item.password==password.value)
+        if(x!=null&&password.value == x.password){
+            console.log(x.password)
             localStorage.setItem("user", name.value)
             setTimeout(() => {
                 ss.style.display = "none"
@@ -23,8 +26,9 @@ submit.addEventListener("click",function(e){
             submit.innerHTML = `<i class="fa-solid fa-check"></i>`
             }, 1500);
             setTimeout(() => {
-                window.location = "index.html"
+                // window.location = "index.html"
             }, 3000)
+            
         }
         else {
             setTimeout(() => {
@@ -41,3 +45,7 @@ submit.addEventListener("click",function(e){
         }
     }
 })
+
+
+
+// setName && setName.trim() ===name.value && setPassword && setPassword.trim()===password.value 
