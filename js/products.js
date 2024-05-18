@@ -46,13 +46,15 @@ continer.innerHTML += drow.join("")
 // delete
 function deleteItems (id){
     if(products.length==1){
+        window.location = "index.html"
         products = [];
         localStorage.products_carts = JSON.stringify(products)
-        window.location = "index.html"
-    }
+    } else{
         products.splice(id,1)
         localStorage.products_carts = JSON.stringify(products)
-        console.log(products)
-        console.log(id)
-        location.reload()
+    console.log(products)
+    console.log(id)
+    location.reload()
+    }
 }
+
