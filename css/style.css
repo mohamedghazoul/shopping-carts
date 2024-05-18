@@ -127,13 +127,34 @@ form  input , .submit-login , .submit-register {
     margin: auto;
     padding: 10px;
     margin-bottom: 10px;
-    border: none;
+    border: solid 1px white;
     border-radius: 10px;
+    color: white;
+    background-color: rgb(83, 85, 94);
+    transition: .3s;
+
+
+}
+form  input::placeholder {
+  color: white;
+}
+form  input:focus::placeholder {
+  color: black;
+  
+}
+.add-data input:focus {
+  color: black;
+  background-color: white;
 
 }
 .submit-login:focus , .submit-register:focus {
     outline: none;
     border: none;
+}
+.submit-login:hover , .submit-register:hover {
+  background-color: white;
+  cursor: pointer;
+  color: black;
 }
 .submit-login {
     font-weight: bold;
