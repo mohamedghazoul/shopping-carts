@@ -26,7 +26,7 @@ submit.addEventListener("click",function(e){
             submit.innerHTML = `<i class="fa-solid fa-check"></i>`
             }, 1500);
             setTimeout(() => {
-                // window.location = "index.html"
+                window.location = "index.html"
             }, 3000)
             
         }
