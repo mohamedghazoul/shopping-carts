@@ -25,12 +25,6 @@ submit.addEventListener("click",function(e){
             spenar.style.display = "none"
         }, 1400);   
     }else{
-        let y = data.find((item)=>item.email==email.value)
-        if(y!=null){
-            setTimeout(() => {
-                ss.style.display = "none"
-                spenar.style.display = "block"
-            }, 500);
             setTimeout(() => {
                 spenar.style.display = "none"
                 lab.innerHTML = "The Email has Olready token"
