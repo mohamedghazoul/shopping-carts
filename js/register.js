@@ -25,13 +25,7 @@ submit.addEventListener("click",function(e){
             spenar.style.display = "none"
         }, 1400);   
     }else{
-            setTimeout(() => {
-                spenar.style.display = "none"
-                lab.innerHTML = "The Email has Olready token"
-                ss.style.display = "block"
-            }, 1500);
-        }
-        else{
+
         localStorage.setItem ("name", name.value)
         localStorage.setItem ("email", email.value )
         localStorage.setItem ("password",password.value)
@@ -52,6 +46,5 @@ submit.addEventListener("click",function(e){
         }, 3000);
         data.push({name:localStorage.getItem("name"),email:localStorage.getItem("email"),password:localStorage.getItem("password")})
         console.log(data)
-    }
     }
 })
