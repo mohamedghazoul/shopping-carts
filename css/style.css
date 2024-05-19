@@ -130,7 +130,7 @@ form  input , .submit-login , .submit-register {
     border: solid 1px white;
     border-radius: 10px;
     color: white;
-    background-color: rgb(83, 85, 94);
+    background-color: rgb(214, 217, 230,0.5);
     transition: .3s;
 
 
